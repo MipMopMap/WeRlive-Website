@@ -1,0 +1,4 @@
+.Jobs {
+  display: flex;
+  flex-direction: column;
+}

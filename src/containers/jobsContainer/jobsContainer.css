@@ -1,0 +1,97 @@
+.JobsContainer-Wrapper {
+  width: 100%;
+}
+
+.JobsContainer-Heading {
+  margin: auto;
+}
+
+.JobsContainer-Heading h2 {
+  font-size: 50px;
+  line-height: 1.06;
+  letter-spacing: 1.88px;
+  opacity: 1;
+  text-align: center;
+  font-weight: 600;
+}
+
+.JobsContainer-Heading p {
+  text-align: center;
+  margin: 20px auto 0;
+  font-size: 22px;
+  line-height: 1.63;
+  letter-spacing: 0.5px;
+  max-width: 580px;
+  margin: 20px auto 0;
+  font-family: var(--font-family-title2);
+  font-weight: 400;
+  color: var(--color-p-secondary);
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.JobsContainer-Heading p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  background: var(--color-accent);
+  height: 2px;
+}
+
+.searchBox {
+  width: 100%;
+  margin: 2rem 0 1rem;
+  display: flex;
+  /* max-height: 10px; */
+  justify-content: center;
+}
+
+.input {
+  flex: 2;
+  width: 100%;
+  min-height: 40px;
+  font-family: var(--font-family-text);
+  font-size: 20px;
+  line-height: 27px;
+  padding: 0 1rem;
+  outline: 1px solid transparent;
+  border: none;
+  transition: 0.5s ease-in-out;
+  border-radius: 5px;
+  max-width: 300px;
+  justify-content: center;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 1rem;
+}
+
+.input:focus {
+  outline: 1px solid var(--color-main);
+}
+
+.Jobs-List {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1200px) {
+  .Jobs-List {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Jobs-List {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .JobsContainer-Heading {
+    margin-top: 4rem;
+  }
+}

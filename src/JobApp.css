@@ -1,0 +1,50 @@
+.JobApp-Info-Container {
+  padding-top: 0;
+}
+
+.Contact-Wrapper .Contact-Wrapper-Content p {
+  margin-bottom: 2rem;
+}
+
+.JobApp-Info-Content {
+  display: flex;
+  padding: 2rem 4rem;
+  background: var(--color-bg);
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+  gap: 8rem;
+}
+
+.JobApp-Links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 1rem;
+}
+
+.JobApp-Links svg {
+  transition: 200ms;
+  fill: var(--color-text-main);
+}
+
+.JobApp-Links svg:hover {
+  fill: var(--color-main);
+}
+
+.JobApp-Info-Content .Form-Wrapper {
+  align-self: flex-start;
+}
+
+@media screen and (max-width: 900px) {
+  .JobApp-Info-Content {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .JobApp-Info-Content .Form-Wrapper {
+    width: 100%;
+  }
+}

@@ -1,0 +1,45 @@
+.CTA-Wrapper {
+  padding: 2rem;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--color-bg2);
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-top: 4rem;
+}
+
+.CTA-Wrapper h3 {
+  font-family: var(--font-family-title);
+  font-size: 40px;
+  letter-spacing: 1.25px;
+  font-weight: 700;
+  line-height: 1.33;
+  /* color: #1b2025; */
+  max-width: 500px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.CTA-Wrapper .Button-Wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+@media screen and (max-width: 750px) {
+  .CTA-Wrapper {
+    width: 100%;
+  }
+
+  .CTA-Wrapper h3 {
+    font-size: 20px;
+    word-break: break-word;
+    max-width: 100%;
+  }
+}

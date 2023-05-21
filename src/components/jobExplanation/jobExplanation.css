@@ -1,0 +1,33 @@
+.JobExplanation-Container {
+  flex: 1;
+}
+
+.JobExplanation-Container p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  font-family: var(--font-familyHeb);
+  direction: rtl;
+  text-align: right;
+}
+
+.JobExplanation-Container h3 {
+  margin: 1rem 0;
+  font-family: var(--font-familyHeb);
+  direction: rtl;
+  text-align: right;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+#ltr p,
+#ltr h3 {
+  font-family: var(--font-family-text);
+  direction: ltr;
+  text-align: left;
+}
+
+.JobExplanation-Container li {
+  margin-bottom: 0.5rem;
+  list-style-type: none;
+}

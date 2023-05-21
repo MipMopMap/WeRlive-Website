@@ -1,0 +1,88 @@
+.Clients-Wrapper {
+  padding-top: 0;
+}
+
+.Clients-Title h2 {
+  font-size: 50px;
+  line-height: 1.06;
+  letter-spacing: 1.88px;
+  opacity: 1;
+  text-align: center;
+  font-weight: 600;
+}
+
+.Clients-Title p {
+  text-align: center;
+  margin: 20px auto 0;
+  font-size: 22px;
+  line-height: 1.63;
+  letter-spacing: 0.5px;
+  max-width: 580px;
+  margin: 20px auto 0;
+  font-family: var(--font-family-title2);
+  font-weight: 400;
+  color: var(--color-p-secondary);
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.Clients-Title p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  background: var(--color-accent);
+  height: 2px;
+}
+
+.Clients-Content {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.Clients-Content-Column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 0 0 calc((100% - 4rem) / 5);
+
+  gap: 1rem;
+  align-content: center;
+}
+
+.Client-Box {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: var(--box-shadow);
+  padding: 2rem 1rem;
+  pointer-events: none;
+}
+
+.Client-Box img {
+  width: 100%;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 600px) {
+  .Clients-Content {
+    flex-direction: column;
+  }
+
+  .Client-Box img {
+    width: auto;
+    height: 100%;
+  }
+}

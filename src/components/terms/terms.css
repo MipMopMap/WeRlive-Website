@@ -1,0 +1,70 @@
+.Terms-Wrapper {
+  position: fixed;
+  top: 15%;
+  left: 10%;
+  right: 10%;
+  bottom: 15%;
+  margin: auto;
+  background: var(--color-bg);
+  z-index: 500;
+  border-radius: 1rem;
+  overflow: scroll;
+  padding: 2rem;
+  font-family: var(--font-family-text);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px,
+    var(--box-shadow);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.Terms-Wrapper ol {
+  list-style-type: none;
+}
+
+.Terms-Wrapper h2 {
+  font-size: 50px;
+  line-height: 1.06;
+  letter-spacing: 1.88px;
+  opacity: 1;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.Terms-Wrapper p {
+  /* margin-top: 20px; */
+  color: var(--color-p-secondary);
+  font-family: var(--font-family-text);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.44px;
+}
+
+.Terms-Wrapper h3 {
+  margin: 1rem 0 0 0;
+  text-decoration: underline;
+}
+
+.Terms-Wrapper h3:first-child {
+  margin-bottom: 1rem;
+}
+
+.Terms-Wrapper a {
+  /* font-weight: bold;
+  text-decoration: underline; */
+  color: #0065cc;
+}
+
+.Terms-Wrapper p:last-child {
+  font-size: 0.75rem;
+  color: var(--color-text-main);
+  align-self: center;
+  margin: 1rem 0 0 0;
+}
+
+.Terms-Close {
+  align-self: center;
+  margin-top: 1rem;
+}

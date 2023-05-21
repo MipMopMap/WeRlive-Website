@@ -1,0 +1,9 @@
+export { default as Hero } from "./hero/hero";
+export { default as WhyUs } from "./whyUs/whyUs";
+export { default as Clients } from "./clients/clients";
+export { default as WhatWeDo } from "./whatWeDo/whatWeDo";
+export { default as Jobs } from "./jobs/jobs";
+export { default as Ventures } from "./ventures/ventures";
+export { default as JobsContainer } from "./jobsContainer/jobsContainer";
+export { default as DidntFindJob } from "./didntFindJob/didntFindJob";
+export { default as ContactContainer } from "./contactContainer/contactContainer";

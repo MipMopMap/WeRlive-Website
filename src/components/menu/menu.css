@@ -1,0 +1,133 @@
+.Menu-Wrapping {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.Menu-Content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  align-items: center;
+}
+
+.Menu-Wrapping img {
+  width: 100px;
+  /* margin-bottom: -1.6rem; */
+}
+
+.Menu-Menu-Wrapper {
+  display: flex;
+  gap: 5rem;
+  font-family: var(--font-family-text);
+  text-transform: uppercase;
+  align-items: center;
+  background: transparent;
+}
+
+.Menu-Menu-Wrapper p {
+  font-size: 0.75rem;
+  color: white;
+  width: max-content;
+  position: relative;
+}
+
+.Menu-Menu-Wrapper p::before {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: white;
+  transform: scale(0);
+  transition: transform ease-in-out 200ms;
+  z-index: -1;
+}
+
+.Menu-Menu-Wrapper p:hover::before {
+  transform: scale(1);
+}
+
+/* .Menu-CTA {
+  background: var(--color-main);
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+  color: white;
+  cursor: pointer;
+  font-size: 0.75rem;
+
+  transition: opacity 200ms ease-in-out;
+}
+
+.Menu-CTA:hover {
+  opacity: 0.9;
+} */
+
+.scrolling {
+  background: var(--color-bg2);
+  box-shadow: var(--box-shadow);
+  transform: scaleY(0.95);
+  transform-origin: top;
+  transition: 200ms;
+}
+
+.scrolling .Menu-Menu-Wrapper p::before {
+  background: var(--color-text-main);
+}
+
+.scrolling p {
+  color: var(--color-text-main);
+}
+
+.darkNav p {
+  color: var(--color-text-main);
+}
+
+.darkNav .Menu-Menu-Wrapper p::before {
+  background: var(--color-text-main);
+}
+
+.Mobile-Menu {
+  display: none;
+  position: relative;
+  font-family: var(--font-family-text);
+}
+
+.Mobile-Menu-Open {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: max-content;
+  width: max-content;
+  padding: 2rem;
+  background: var(--color-bg2);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.Close-Mobile-Menu {
+  fill: var(--color-text-main);
+}
+
+.Mobile-Menu svg {
+  align-self: flex-start;
+  /* fill: var(--color-text-main); */
+}
+
+@media screen and (max-width: 1050px) {
+  .Menu-Menu-Wrapper {
+    display: none;
+  }
+
+  .Mobile-Menu {
+    display: flex;
+  }
+}

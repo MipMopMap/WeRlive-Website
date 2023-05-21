@@ -1,0 +1,249 @@
+.Hero-Wrapping {
+  height: 100vh;
+  position: relative;
+  background: var(--color-main);
+  overflow-y: hidden;
+}
+
+.Hero-Wrapping::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -5%;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background: url("../../assets/test.svg");
+  background-size: cover;
+  /* z-index: -1; */
+  width: 100%;
+  transform: var(--paralax-transform);
+}
+
+.Hero-Content {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  /* justify-content: center; */
+  height: 100%;
+  text-align: left;
+  /* gap: 1rem; */
+  position: relative;
+}
+
+.Hero-Content h1 {
+  color: var(--color-main);
+  font-size: 105px;
+  letter-spacing: -1.8px;
+  font-weight: 700;
+  /* max-width: 50%; */
+  line-height: 1;
+  color: white;
+}
+
+.Hero-Content p {
+  max-width: 75%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  color: var(--color-p-secondary);
+  font-family: var(--font-family-text);
+  color: white;
+}
+
+.custom-shape-divider-bottom-1655746188 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1655746188 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 71px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1655746188 .shape-fill {
+  fill: var(--color-bg2);
+}
+
+@media screen and (min-width: 2000px) {
+  .Hero-Wrapping::before {
+    top: -15%;
+  }
+}
+
+.Hero-Content h1 {
+  animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.Hero-Content p {
+  animation: slide-in-left 0.5s 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.Hero-Content .Form-Button-Submitted .Button-Wrapper {
+  animation: scale-in-ver-bottom 0.5s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both,
+    shake-horizontal 0.8s 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation: scale-in-ver-bottom 0.5s 1s
+      cubic-bezier(0.25, 0.46, 0.45, 0.94) both,
+    shake-horizontal 0.8s 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: 200ms ease-in-out;
+}
+
+.Hero-Content .Form-Button-Submitted .Button-Wrapper:hover {
+  transform: scale(0.9);
+  opacity: 0.9;
+}
+
+.JobAlerts-Form {
+  animation: scale-in-ver-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: scale-in-ver-bottom 0.5s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.JobAlerts-Form input,
+.JobAlerts-Form button {
+  font-size: 0.75rem;
+  padding: 1rem 2rem;
+  border: none;
+  text-align: center;
+  font-family: var(--font-family-text);
+  color: var(--color-p);
+  box-shadow: var(--box-shadow);
+  outline: 1px solid transparent;
+  align-content: center;
+  justify-content: center;
+}
+
+.JobAlerts-Form input:first-child {
+  border-radius: 1rem 0 0 1rem;
+}
+
+.JobAlerts-Form button {
+  border-radius: 0 1rem 1rem 0;
+  background: var(--color-accent);
+  color: white;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+  opacity: 1;
+}
+
+.JobAlerts-Form button:last-child:hover {
+  transform: scale(0.9);
+  opacity: 0.9;
+}
+
+.JobAlerts-Form input:focus::placeholder {
+  color: transparent;
+}
+
+.Hero-Info {
+  flex: 1;
+}
+
+.Hero-Image {
+  flex: 1;
+  /* background: black; */
+  position: relative;
+
+  --x: calc(var(--px) - 0.5);
+  --y: calc(var(--py) - 0.5);
+  transform: perspective(1000px);
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition-delay: 1s;
+  position: unset;
+}
+
+.Hero-Image:hover {
+  transform: perspective(1000px) rotateY(calc(var(--x) * 35deg))
+    rotateX(calc(var(--y) * -35deg));
+
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 2s cubic-bezier(0.23, 1, 0.32, 1);
+
+  /* border: 1px solid white; */
+}
+
+.Hero-Image img:last-child {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  /* border-radius: 100%; */
+  -webkit-mask-image: url(../../assets/blob-mask.svg);
+  mask-image: url(../../assets/blob-mask.svg);
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  /* object-position: calc(50% - var(--x) * 20px) calc(50% - var(--y) * 20px); */
+  z-index: 10;
+}
+
+.Hero-Image img:first-child {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  z-index: 0;
+  aspect-ratio: 1/1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  filter: drop-shadow(6px 6px 4px rgba(0, 0, 0, 0.3));
+}
+
+@media screen and (max-width: 768px) {
+  .Hero-Content h1 {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .Hero-Content p {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .Hero-Content .Button-Wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .Hero-Content .JobAlerts-Form {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .Hero-Image {
+    display: none;
+  }
+
+  .JobAlerts-Form {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .JobAlerts-Form form {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Hero-Content h1 {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .Hero-Content h1 {
+    font-size: 70px;
+  }
+}

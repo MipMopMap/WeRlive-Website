@@ -1,0 +1,158 @@
+/* .Jobs-Wrapper {
+  height: 100vh;
+} */
+
+.Jobs-Container {
+  display: flex;
+}
+
+.JobsContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.JobsGrid {
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 21px;
+  font-family: var(--font-family-text);
+  color: var(--color-main);
+}
+
+.JobsGrid p {
+  font-size: 16px;
+  cursor: default;
+  user-select: none;
+}
+
+.box {
+  padding: 0 35px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: var(--color-bg2);
+  box-shadow: var(--box-shadow);
+  white-space: nowrap;
+  font-size: 18px;
+  letter-spacing: -0.6px;
+  line-height: 26px;
+  height: 65px;
+  min-width: 99px;
+}
+
+.boxesRow {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  line-height: 1.2;
+}
+
+.firstBox {
+  background: linear-gradient(
+    90deg,
+    var(--tran) 0%,
+    var(--color-secondary-bg) 100%
+  );
+  box-shadow: var(--box-shadow);
+}
+
+.lastBox {
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+  opacity: 0.3;
+}
+
+.JobsContent h2 {
+  font-size: 50px;
+  line-height: 1.06;
+  letter-spacing: 1.88px;
+  opacity: 1;
+  text-align: left;
+  font-weight: 600;
+}
+
+.JobsContent p {
+  font-size: 22px;
+  line-height: 1.63;
+  letter-spacing: 0.5px;
+  max-width: 580px;
+  margin: 20px 0;
+  font-family: var(--font-family-title2);
+  font-weight: 400;
+  color: var(--color-p-secondary);
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.JobsContent p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 40px;
+  background: var(--color-accent);
+  height: 2px;
+}
+
+@media screen and (max-width: 1350px) {
+  .Jobs-Container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .JobsContent {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .JobsContent p::after {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .JobsGrid {
+    overflow-x: hidden;
+    padding: 2rem;
+  }
+
+  .JobsSection {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

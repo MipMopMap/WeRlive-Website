@@ -1,0 +1,83 @@
+.Card-Wrapper {
+  background: var(--color-bg);
+  height: 100%;
+  box-shadow: 0 70px 140px 0 rgb(130 136 171 / 20%);
+  position: relative;
+
+  border-radius: 1rem;
+}
+
+.Card-Img {
+  height: 350px;
+  display: flex;
+}
+
+.Card-Img img {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+  object-fit: cover;
+}
+
+.Card-Content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.Card-Content h3 {
+  font-size: 40px;
+  letter-spacing: 1.25px;
+  font-family: var(--font-family-title);
+  font-weight: 700;
+  line-height: 1.33;
+  /* color: #1b2025; */
+  text-transform: capitalize;
+}
+
+.Card-Content p {
+  margin-top: 20px;
+  color: var(--color-p-secondary);
+
+  font-family: var(--font-family-text);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.78;
+  letter-spacing: 0.44px;
+}
+
+.Card-Content a {
+  background: var(--color-main-lighter);
+  width: max-content;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  color: var(--color-main);
+  font-family: var(--font-family-text);
+  font-size: 0.75rem;
+  box-shadow: var(--box-shadow);
+  transition: opacity, transform 200ms ease-in-out;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+.Card-Content a:hover {
+  opacity: 0.9;
+  transform: scale(0.95);
+}
+
+.Left-Card {
+  top: -450px;
+}
+
+@media screen and (max-width: 1024px) {
+  .Left-Card {
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .Card-Content h3 {
+    font-size: 30px;
+  }
+}

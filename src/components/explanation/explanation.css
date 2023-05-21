@@ -1,0 +1,60 @@
+.Explanation-Wrapper {
+  align-items: center;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+}
+
+.Explanation-Icon {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+}
+
+.Explanation-Content {
+  text-align: center;
+  width: 100%;
+  max-width: 230px;
+  margin: 24px auto 0;
+}
+
+.Explanation-Content h3 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 1px;
+}
+
+.Explanation-Content p {
+  font-family: var(--font-family-title2);
+
+  margin-top: 15px;
+  font-size: 15;
+  line-height: 1.73;
+  letter-spacing: 0.5px;
+  color: var(--color-p-secondary);
+}
+
+.Explanation-Icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.Explanation-Icon img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  transition: 200ms;
+  box-shadow: var(--box-shadow);
+  border-radius: 100%;
+}
+
+.Explanation-Icon img:hover {
+  transform: scale(0.95);
+}

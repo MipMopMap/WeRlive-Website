@@ -1,0 +1,41 @@
+.SideMenu-Wrapper {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.SideMenu-Content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.SideMenu-Link a {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  visibility: hidden;
+}
+
+.SideMenu-Link a::after {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: var(--color-main);
+  border-radius: 50%;
+  pointer-events: all;
+  visibility: visible;
+  box-shadow: var(--box-shadow);
+}
+
+.SideMenu-Link a:hover {
+  visibility: visible;
+}

@@ -1,0 +1,193 @@
+.Form-Wrapper {
+  flex: 1;
+  height: 100%;
+  background: transparent;
+}
+
+.Form-Wrapper {
+  align-self: center;
+  font-family: var(--font-family-text);
+}
+
+.Form-Wrapper form {
+  display: flex;
+  flex-direction: column;
+}
+
+.Form-Wrapper input,
+.Form-Wrapper textarea {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  text-align: center;
+  font-family: var(--font-family-text);
+  color: var(--color-p);
+  font-size: 1rem;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  box-shadow: var(--box-shadow);
+  outline: none;
+  width: 100%;
+  transition: border 500ms;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.Form-Wrapper input:focus,
+.Form-Wrapper textarea:focus {
+  border: 1px solid var(--color-main);
+}
+
+.Form-Wrapper input:focus::placeholder,
+.Form-Wrapper textarea:focus::placeholder {
+  color: transparent;
+}
+
+.Form-Wrapper textarea {
+  resize: none;
+}
+
+.Form-Wrapper button {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  text-align: center;
+  font-family: var(--font-family-text);
+  color: var(--color-p);
+  font-size: 1rem;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  box-shadow: var(--box-shadow);
+  outline: none;
+  width: 100%;
+  transition: border 500ms;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.Form-Wrapper input[type="submit"],
+.Form-Wrapper button {
+  background: var(--color-main);
+  color: white;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+.Form-Wrapper input[type="submit"]:hover,
+.Form-Wrapper button:hover {
+  opacity: 0.9;
+  transform: scale(0.95);
+}
+
+.Form-Wrapper div {
+  position: relative;
+}
+
+.Form-Wrapper div::before {
+  position: absolute;
+  content: "";
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-main) 50%,
+    transparent 100%
+  );
+}
+
+.Form-Wrapper input:focus .Form-Wrapper div::before {
+  transform: scale(1);
+}
+
+.Form-Location {
+  display: none;
+  pointer-events: none;
+}
+
+.Thank-You {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  padding: 2rem 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.Thank-You::before {
+  display: none;
+}
+
+.Form-File-Div::before {
+  display: none;
+}
+
+.Form-Wrapper input[type="file"] {
+  box-shadow: none;
+  padding-left: 0;
+  border: none;
+  width: max-content;
+  font-size: 0.75rem;
+}
+
+.Form-Wrapper input[type="file"]:hover {
+  border: none;
+}
+
+/* ::-ms-browse {
+  background: var(--color-main-lighter);
+  border: none;
+  padding: 1rem 2rem;
+  color: var(--color-main);
+  border-radius: 1rem;
+  outline: none;
+  font-family: var(--font-family-text);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transform: scale(1);
+  opacity: 1;
+  transition: 200ms ease-in-out;
+}
+
+::-webkit-file-upload-button {
+  background: var(--color-main-lighter);
+  border: none;
+  padding: 1rem 2rem;
+  color: var(--color-main);
+  border-radius: 1rem;
+  outline: none;
+  font-family: var(--font-family-text);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transform: scale(1);
+  opacity: 1;
+  transition: 200ms ease-in-out;
+} */
+
+::file-selector-button {
+  background: var(--color-main-lighter);
+  border: none;
+  padding: 1rem 2rem;
+  color: var(--color-main);
+  border-radius: 1rem;
+  outline: none;
+  font-family: var(--font-family-text);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transform: scale(1);
+  /* opacity: 1; */
+  transition: 200ms ease-in-out;
+  border-bottom: 1px solid transparent;
+}
+
+::file-selector-button:hover {
+  border-bottom: 1px solid var(--color-main);
+}
+
+.Form-Wrapper label {
+  font-size: 0.75rem;
+  opacity: 0.5;
+}

@@ -1,0 +1,66 @@
+.Theme-Wrapper button {
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 0.5rem;
+  position: relative;
+  aspect-ratio: 1/1;
+  background: var(--color-bg2);
+  border-radius: 100%;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+  /* filter: drop-shadow(6px 6px 4px rgba(0, 0, 0, 0.3)); */
+}
+
+.Theme-Wrapper .Bloub {
+  content: "";
+  position: absolute;
+  width: 35%;
+  height: 45%;
+  left: 24%;
+  background: var(--color-bg2);
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+  animation: slideleft 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  transition: 200ms ease-in-out;
+}
+
+.Theme-Animation svg {
+  fill: var(--color-main);
+}
+
+@keyframes slideleft {
+  0% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideright {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+    opacity: 0;
+  }
+}
+
+.Theme-Wrapper button:hover {
+  background: var(--color-main-lighter);
+  transform: scale(0.9);
+}
+
+.Theme-Wrapper button:hover .Bloub {
+  background: var(--color-main-lighter);
+}
